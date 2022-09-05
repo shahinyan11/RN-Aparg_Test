@@ -3,26 +3,45 @@ import {
   FlatList,
   Image,
   ImageBackground,
+  Text,
+  TextInput,
   TouchableOpacity,
   View,
 } from 'react-native';
-import useContainer from './hook';
-import styles from './styles';
-import {FormikProvider} from 'formik';
+import RNPickerSelect from 'react-native-picker-select';
 
-import Input from '../../components/Input';
 import images from '../../assets/images';
-import GalleryItem from '../../components/GalleryItem';
 import {Camera} from '../../assets/svgs';
+import GalleryItem from '../../components/GalleryItem';
+
+import styles from './styles';
+import useContainer from './hook';
+
+const genders = [
+  {label: 'Male', value: 'male'},
+  {label: 'Female', value: 'Female'},
+];
 
 const Profile = () => {
-  const {formik, chooseAvatar, photos, avatar, uploadPhotos} = useContainer();
-  console.log(222, photos);
+  const {
+    name,
+    photos,
+    gender,
+    avatar,
+    setName,
+    surname,
+    username,
+    setGender,
+    setSurname,
+    setUsername,
+    chooseAvatar,
+    uploadPhotos,
+  } = useContainer();
+
   return (
     <View style={styles.container}>
       <View style={styles.circle}>
-        <Image source={{uri: avatar}} style={styles.avatar} />
-
+        <Image source={avatar} style={styles.avatar} />
         <ImageBackground source={images.shadow} style={styles.shadow}>
           <TouchableOpacity onPress={chooseAvatar}>
             <Camera />
@@ -33,6 +52,7 @@ const Profile = () => {
         <FlatList
           data={photos}
           contentContainerStyle={styles.flatList}
+          showsHorizontalScrollIndicator={false}
           horizontal={true}
           renderItem={({item, index}) =>
             index < 1 ? (
@@ -48,22 +68,38 @@ const Profile = () => {
         />
       </View>
       <View style={styles.inputsContainer}>
-        <FormikProvider value={formik}>
-          <Input
-            id="name"
-            name="email"
-            style={styles.input}
-            placeholder="E-mail"
-            placeholderTextColor="#77B6DB"
-          />
-          <Input
-            id="password"
-            name="password"
-            style={styles.input}
-            placeholder="Пароль"
-            placeholderTextColor="#77B6DB"
-          />
-        </FormikProvider>
+        <Text style={styles.label}>Имя</Text>
+        <TextInput
+          name="name"
+          onChangeText={text => setName(text)}
+          style={styles.input}
+          placeholderTextColor="#77B6DB"
+          value={name}
+        />
+        <Text style={styles.label}>Фамилия</Text>
+        <TextInput
+          name="surname"
+          onChangeText={text => setSurname(text)}
+          style={styles.input}
+          placeholderTextColor="#77B6DB"
+          value={surname}
+        />
+        <Text style={styles.label}>Пол</Text>
+        <RNPickerSelect
+          items={genders}
+          onValueChange={value => {
+            setGender(value);
+          }}
+          value={gender}
+        />
+        <Text style={styles.label}>Username</Text>
+        <TextInput
+          name="username"
+          onChangeText={text => setUsername(text)}
+          style={styles.input}
+          placeholderTextColor="#77B6DB"
+          value={username}
+        />
       </View>
     </View>
   );

@@ -1,5 +1,5 @@
-export const SET_PIECE_COORDS = 'SET_PIECE_COORDS';
+export const SET_LOGGED_IN = 'SET_LOGGED_IN';
 
-export function setPieceCoords(coords) {
-  return {type: SET_PIECE_COORDS, payload: coords};
+export function setLoggedIn(bool) {
+  return {type: SET_LOGGED_IN, payload: bool};
 }

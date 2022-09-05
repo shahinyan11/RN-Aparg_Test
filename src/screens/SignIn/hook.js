@@ -1,12 +1,25 @@
 import {useFormik} from 'formik';
-
-import validationSchema from '../../validations/signIn';
 import {useNavigation} from '@react-navigation/native';
+import {useDispatch} from 'react-redux';
+
+import signIn from '../../hoocks/signIn';
+import {setLoggedIn} from '../../redux/actions';
+import validationSchema from '../../validations/signIn';
 
 function useContainer() {
   const navigation = useNavigation();
+  const dispatch = useDispatch();
 
-  const onSubmit = () => {
+  const onSubmit = async (values, form) => {
+    const res = await signIn(values);
+
+    if (res?.error) {
+      form.setErrors({password: 'Invalid password'});
+
+      return;
+    }
+
+    dispatch(setLoggedIn(true));
     navigation.navigate('profile');
   };
 

@@ -5,6 +5,7 @@ import bg_bottom from './bg_bottom.png';
 import subtract from './subtract.png';
 import shadow from './shadow.png';
 import addPhoto from './addPhoto.png';
+import defaultAvatar from './defaultAvatar.png';
 
 export default {
   shutterstock,
@@ -14,4 +15,5 @@ export default {
   subtract,
   shadow,
   addPhoto,
+  defaultAvatar,
 };

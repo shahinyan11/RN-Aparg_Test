@@ -1,19 +1,15 @@
-import {SET_PIECE_COORDS} from '../actions';
+import {SET_LOGGED_IN} from '../actions';
 
 const initialState = {
-  pieceCoords: {
-    x: null,
-    y: null,
-    status: null,
-  },
+  loggedIn: false,
 };
 
 function reducer(state = initialState, action: any) {
   switch (action.type) {
-    case SET_PIECE_COORDS: {
+    case SET_LOGGED_IN: {
       return {
         ...state,
-        pieceCoords: {...action.payload},
+        loggedIn: action.payload,
       };
     }
 

@@ -9,9 +9,9 @@ import {
 } from 'react-native';
 
 import images from '../../assets/images';
+import Input from '../../components/Input';
 import useContainer from './hook';
 import styles from './styles';
-import Input from '../../components/Input';
 
 const Welcome = () => {
   const {formik} = useContainer();
@@ -42,7 +42,6 @@ const Welcome = () => {
           </View>
         </View>
       </View>
-
       <View style={styles.bottomContainer}>
         <Image source={images.bg_bottom} style={styles.imageAbsolute} />
         <TouchableOpacity

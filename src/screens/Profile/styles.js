@@ -1,9 +1,10 @@
 import {StyleSheet} from 'react-native';
+
 import {ratioWidth} from '../../constants';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    height: '100%',
     alignItems: 'center',
     paddingHorizontal: ratioWidth * 28,
     backgroundColor: '#E7E7E7',
@@ -50,12 +51,18 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     paddingTop: 37,
   },
-
+  label: {
+    marginBottom: 8,
+    marginTop: 28,
+  },
   input: {
     height: 48,
     width: ratioWidth * 241,
     borderBottomWidth: 1,
     borderBottomColor: '#77B6DB',
+  },
+  dropDownButton: {
+    backgroundColor: 'rgba(0,0,0,0)',
   },
 });
 

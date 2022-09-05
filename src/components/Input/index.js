@@ -1,8 +1,8 @@
 import React from 'react';
-
-import useContainer from './hook';
 import {Text, TextInput, View} from 'react-native';
+
 import styles from './styles';
+import useContainer from './hook';
 
 const Input = ({name, ...props}) => {
   const {meta, field} = useContainer({name});
