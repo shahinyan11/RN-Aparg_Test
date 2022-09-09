@@ -6,6 +6,8 @@ const styles = StyleSheet.create({
     height: 80,
     borderRadius: 12,
     overflow: 'hidden',
+    marginVertical: 4,
+    marginHorizontal: 4,
   },
 
   image: {

@@ -6,6 +6,10 @@ import subtract from './subtract.png';
 import shadow from './shadow.png';
 import addPhoto from './addPhoto.png';
 import defaultAvatar from './defaultAvatar.png';
+import selectedPhotoLayer from './selectedPhotoLayer.png';
+import photoLayer from './photoLayer.png';
+import ellipse from './ellipse.png';
+import ellipseSelected from './ellipseSelected.png';
 
 export default {
   shutterstock,
@@ -16,4 +20,8 @@ export default {
   shadow,
   addPhoto,
   defaultAvatar,
+  selectedPhotoLayer,
+  ellipse,
+  ellipseSelected,
+  photoLayer,
 };

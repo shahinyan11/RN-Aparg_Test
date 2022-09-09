@@ -8,7 +8,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SignIn from '../screens/SignIn';
 import Welcome from '../screens/Welcome';
 import Profile from '../screens/Profile';
-import {setLoggedIn} from '../redux/actions';
+import {setLoggedInAction} from '../redux/actions';
+import Gallery from '../screens/Gallery';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,7 +22,7 @@ const StackNavigator = () => {
     setLoading(true);
     AsyncStorage.getItem('currentUser').then(data => {
       if (data) {
-        dispatch(setLoggedIn(true));
+        dispatch(setLoggedInAction(true));
       }
       setLoading(false);
     });
@@ -50,10 +51,14 @@ const StackNavigator = () => {
             }}
           />
         )}
-
         <Stack.Screen
           name="signIn"
           component={SignIn}
+          options={{headerTransparent: true}}
+        />
+        <Stack.Screen
+          name="gallery"
+          component={Gallery}
           options={{headerTransparent: true}}
         />
       </Stack.Navigator>

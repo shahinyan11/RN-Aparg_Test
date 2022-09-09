@@ -3,12 +3,15 @@ import {StyleSheet} from 'react-native';
 import {ratioWidth} from '../../constants';
 
 const styles = StyleSheet.create({
-  container: {
-    height: '100%',
-    alignItems: 'center',
-    paddingHorizontal: ratioWidth * 28,
+  scrollView: {
+    flex: 1,
     backgroundColor: '#E7E7E7',
   },
+  container: {
+    alignItems: 'center',
+    paddingHorizontal: ratioWidth * 28,
+  },
+
   circle: {
     width: ratioWidth * 120,
     height: ratioWidth * 120,
@@ -47,7 +50,6 @@ const styles = StyleSheet.create({
   },
   inputsContainer: {
     width: ratioWidth * 319,
-    height: 367,
     paddingHorizontal: 32,
     paddingTop: 37,
   },
@@ -63,6 +65,43 @@ const styles = StyleSheet.create({
   },
   dropDownButton: {
     backgroundColor: 'rgba(0,0,0,0)',
+  },
+
+  modal: {
+    flex: 1,
+    backgroundColor: 'rgba(30, 30, 30, 0.75)',
+    position: 'absolute',
+    height: '100%',
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+
+  button: {
+    width: ratioWidth * 355,
+    height: 57,
+    backgroundColor: '#F8F8F8',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  cameraButton: {
+    borderTopLeftRadius: 14,
+    borderTopRightRadius: 14,
+    borderBottomWidth: 0.5,
+  },
+
+  albumButton: {
+    borderTopWidth: 0.5,
+    borderBottomLeftRadius: 14,
+    borderBottomRightRadius: 14,
+  },
+
+  closeButton: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 14,
+    marginTop: 6,
+    marginBottom: 10,
   },
 });
 

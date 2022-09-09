@@ -29,23 +29,26 @@ const styles = StyleSheet.create({
     borderBottomColor: '#77B6DB',
   },
   bottomContainer: {
+    marginTop: -53,
     height: 387,
     width: ratioWidth * 375,
     alignItems: 'center',
     justifyContent: 'flex-end',
-    paddingBottom: 45,
   },
 
   button: {
     marginBottom: 8,
     borderRadius: 12,
     width: ratioWidth * 300,
+    backgroundColor: '#FFFFFF',
     height: 60,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  buttonWhite: {
-    backgroundColor: '#FFFFFF',
+
+  buttonTransparent: {
+    backgroundColor: 'rgba(0,0,0, 0)',
+    marginBottom: 45,
   },
 });
 

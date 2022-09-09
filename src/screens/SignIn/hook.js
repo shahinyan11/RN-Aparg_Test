@@ -3,7 +3,7 @@ import {useNavigation} from '@react-navigation/native';
 import {useDispatch} from 'react-redux';
 
 import signIn from '../../hoocks/signIn';
-import {setLoggedIn} from '../../redux/actions';
+import {setLoggedInAction} from '../../redux/actions';
 import validationSchema from '../../validations/signIn';
 
 function useContainer() {
@@ -19,7 +19,7 @@ function useContainer() {
       return;
     }
 
-    dispatch(setLoggedIn(true));
+    dispatch(setLoggedInAction(true));
     navigation.navigate('profile');
   };
 

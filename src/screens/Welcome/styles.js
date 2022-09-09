@@ -10,22 +10,26 @@ const styles = StyleSheet.create({
     height: 405,
     width: ratioWidth * 375,
   },
-  bottomContainer: {
-    height: '100%',
+  bgBottom: {
     position: 'absolute',
+    resizeMode: 'stretch',
     width: ratioWidth * 375,
+    height: '100%',
     top: 284,
-    alignItems: 'center',
   },
 
-  bgBottom: {
-    flex: 1,
+  bottomContainer: {
+    width: ratioWidth * 375,
+    zIndex: 999,
+    alignItems: 'center',
+    paddingBottom: 36,
   },
 
   evernowIcon: {
-    width: ratioWidth * 88,
+    width: 88,
     height: 82,
-    marginTop: 60,
+    marginTop: -41,
+    resizeMode: 'stretch',
   },
 
   actionsContainer: {

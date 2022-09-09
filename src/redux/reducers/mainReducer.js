@@ -1,7 +1,8 @@
-import {SET_LOGGED_IN} from '../actions';
+import {REMOVE_PHOTOS, SET_LOGGED_IN, SET_PHOTOS} from '../actions';
 
 const initialState = {
   loggedIn: false,
+  photos: [],
 };
 
 function reducer(state = initialState, action: any) {
@@ -10,6 +11,19 @@ function reducer(state = initialState, action: any) {
       return {
         ...state,
         loggedIn: action.payload,
+      };
+    }
+
+    case SET_PHOTOS: {
+      return {
+        ...state,
+        photos: [...state.photos, ...action.payload],
+      };
+    }
+    case REMOVE_PHOTOS: {
+      return {
+        ...state,
+        photos: [],
       };
     }
 
