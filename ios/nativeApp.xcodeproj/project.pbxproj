@@ -38,6 +38,13 @@
 			remoteGlobalIDString = 3400A8081CEB54A6008A0BC7;
 			remoteInfo = imageCropPicker;
 		};
+		F0CDFF0D28CB9BA00068DF1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0CDFF0828CB9BA00068DF1E /* RNCCameraRoll.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B5115D1A9E6B3D00147676;
+			remoteInfo = RNCCameraRoll;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +66,7 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F09AAD7A28C5448E00EFCB53 /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNImagePicker.xcodeproj; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; };
 		F0A8D01B28C563000045D0CB /* imageCropPicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = imageCropPicker.xcodeproj; path = "../node_modules/react-native-image-crop-picker/ios/imageCropPicker.xcodeproj"; sourceTree = "<group>"; };
+		F0CDFF0828CB9BA00068DF1E /* RNCCameraRoll.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCCameraRoll.xcodeproj; path = "../node_modules/@react-native-camera-roll/camera-roll/ios/RNCCameraRoll.xcodeproj"; sourceTree = "<group>"; };
 		FFF0B5DDFE2D3CF937B8CC75 /* Pods-nativeApp-nativeAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeApp-nativeAppTests.release.xcconfig"; path = "Target Support Files/Pods-nativeApp-nativeAppTests/Pods-nativeApp-nativeAppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +133,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				F0CDFF0828CB9BA00068DF1E /* RNCCameraRoll.xcodeproj */,
 				F0A8D01B28C563000045D0CB /* imageCropPicker.xcodeproj */,
 				F09AAD7A28C5448E00EFCB53 /* RNImagePicker.xcodeproj */,
 			);
@@ -178,6 +187,14 @@
 			isa = PBXGroup;
 			children = (
 				F0A8D02128C563000045D0CB /* libimageCropPicker.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0CDFF0928CB9BA00068DF1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0CDFF0E28CB9BA00068DF1E /* libRNCCameraRoll.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,6 +279,10 @@
 					ProjectRef = F0A8D01B28C563000045D0CB /* imageCropPicker.xcodeproj */;
 				},
 				{
+					ProductGroup = F0CDFF0928CB9BA00068DF1E /* Products */;
+					ProjectRef = F0CDFF0828CB9BA00068DF1E /* RNCCameraRoll.xcodeproj */;
+				},
+				{
 					ProductGroup = F09AAD7B28C5448E00EFCB53 /* Products */;
 					ProjectRef = F09AAD7A28C5448E00EFCB53 /* RNImagePicker.xcodeproj */;
 				},
@@ -287,6 +308,13 @@
 			fileType = archive.ar;
 			path = libimageCropPicker.a;
 			remoteRef = F0A8D02028C563000045D0CB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F0CDFF0E28CB9BA00068DF1E /* libRNCCameraRoll.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNCCameraRoll.a;
+			remoteRef = F0CDFF0D28CB9BA00068DF1E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
