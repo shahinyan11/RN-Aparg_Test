@@ -71,7 +71,6 @@ const Profile = () => {
                   <GalleryItem {...item} />
                 )
               }
-              keyExtractor={item => item.id}
             />
           </View>
           <View style={styles.inputsContainer}>

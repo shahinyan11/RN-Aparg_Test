@@ -1,13 +1,14 @@
 import {StyleSheet} from 'react-native';
+import {ratioWidth} from "../../constants";
 
 const styles = StyleSheet.create({
   container: {
-    width: 80,
-    height: 80,
+    width: ratioWidth * 75,
+    height: ratioWidth * 75,
     borderRadius: 12,
     overflow: 'hidden',
-    marginVertical: 4,
-    marginHorizontal: 4,
+    marginVertical: ratioWidth * 4,
+    marginHorizontal: ratioWidth * 4,
     position: 'relative',
   },
 
@@ -18,8 +19,8 @@ const styles = StyleSheet.create({
   },
 
   icon: {
-    height: 16,
-    width: 16,
+    height: ratioWidth * 16,
+    width: ratioWidth * 16,
   },
   image: {
     position: 'absolute',

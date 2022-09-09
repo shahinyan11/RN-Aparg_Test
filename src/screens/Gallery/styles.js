@@ -1,15 +1,17 @@
 import {StyleSheet} from 'react-native';
 
+import {ratioWidth} from "../../constants";
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 84,
-    paddingHorizontal: 24,
+    paddingHorizontal: ratioWidth * 20,
     alignItems: 'center',
   },
   preview: {
-    height: 180,
-    width: 180,
+    height: ratioWidth * 180,
+    width: ratioWidth * 180,
     borderRadius: 12,
     overflow: 'hidden',
     marginBottom: 16,
